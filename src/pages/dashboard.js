@@ -10,7 +10,7 @@ const Dashboard = () => {
   // const dailyTasks = useSelector((state) => state.user.dailyTasks);
 
   return (
-    <div className="Dashboard">
+    <div className="DashboardPage">
       this is the dashboard page
       <DailyActions />
       <EnterNewMax />

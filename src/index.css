@@ -8,8 +8,15 @@
   monospace;
 } */
 
-.Dashboard {
+.DashboardPage {
   background-color: blanchedalmond;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.ResultsPage {
+  background-color: rgb(121, 208, 255);
   width: 100vw;
   height: 100vh;
   z-index: 0;
