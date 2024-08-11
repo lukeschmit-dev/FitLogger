@@ -1,24 +1,23 @@
 // src/App.js
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Dashboard from "./pages/dashboard";
-import Results from "./pages/results";
-import Settings from "./pages/settings";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import Dashboard from "./pages/Dashboard";
+import Results from "./pages/Results";
+import Settings from "./pages/Settings";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Header />
-        <Routes>
-          <Route path="/Dashboard" component={Dashboard} />
-          <Route path="/Results" component={Results} />
-          <Route path="/Settings" component={Settings} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Results" element={<Results />} />
+        <Route path="/Settings" element={<Settings />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
