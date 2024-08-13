@@ -1,16 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import { DailyActionsWrapper } from "./DailyActionsWrapper";
 
-const DailyActions = () => {
+// let DailyActionsArray = [
+//   {
+//     "Drink Water": "incomplete",
+//     "150g Protein": "incomplete",
+//     "Stretch for 15 min": "incomplete",
+//     "Read 15 pages": "incomplete",
+//   },
+// ];
+
+function DailyActions() {
+  const [actions, setActions] = useState([]);
+  const [newAction, setNewTask] = useState("");
+
+  function handleInputChange(event) {}
+
+  function addTask(index) {}
+
+  function completeTask(index) {}
+
   return (
     <div className="DailyActions">
-      <h1>Daily Tasks</h1>
-      <ul>
-        <li>Drink water</li>
-        <li>protein powder</li>
-        <li>stretch</li>
-        <li>read 15 pages</li>
-      </ul>
+      <DailyActionsWrapper />
     </div>
   );
-};
+}
 export default DailyActions;
