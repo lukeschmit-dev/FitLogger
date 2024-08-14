@@ -14,7 +14,7 @@ const Dashboard = () => {
       this is the dashboard page
       <DailyActions />
       <EnterNewMax />
-      {/* <TodaysLift /> */}
+      <TodaysLift />
     </div>
   );
 };
