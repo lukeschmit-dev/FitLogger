@@ -11,7 +11,7 @@ const Dashboard = () => {
 
   return (
     <div className="DashboardPage">
-      this is the dashboard page
+      this is the dashboard
       <DailyActions />
       <EnterNewMax />
       <TodaysLift />
