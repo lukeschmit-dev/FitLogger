@@ -1,5 +1,12 @@
 // src/App.js
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Switch,
+  Redirect,
+  Navigate,
+} from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Results from "./pages/Results";
 import Settings from "./pages/Settings";
@@ -12,6 +19,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Navigate to="/Dashboard" />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Results" element={<Results />} />
         <Route path="/Settings" element={<Settings />} />
