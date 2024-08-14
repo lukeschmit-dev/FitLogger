@@ -2,7 +2,7 @@
   "name": "my-fitness-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://lukeschmit-dev.github.io/Dashboard",
+  "homepage": "/FitLogger",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.14.5",
     "@testing-library/jest-dom": "^5.17.0",
