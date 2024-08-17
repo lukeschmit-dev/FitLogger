@@ -11,9 +11,9 @@ const Dashboard = () => {
   return (
     <div className="DashboardPage">
       <Navbar/>
-        <DailyActions />
-        <EnterNewMax />
-        <TodaysLift />
+      <DailyActions />
+      <EnterNewMax />
+      <TodaysLift />
       <Footer/>
     </div>
   );

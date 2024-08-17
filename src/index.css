@@ -94,3 +94,17 @@ footer {
   left: 6rem;
   color: white;
 }
+
+.Today {
+  color: white;
+  margin-right: auto;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.TodaysLiftSection {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+}

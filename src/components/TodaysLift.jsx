@@ -1,24 +1,26 @@
 import React from "react";
+import { Today } from "./Today";
 
 let currentSplit = "Legs";
 
 const TodaysLift = () => {
   return (
     <div className="TodaysLift">
+      <Today/>
       <h1>Todays Lift: {currentSplit}</h1>
 
-      <div className="WarmupSection">
+      <div className="TodaysLiftSection">
         <h3>Warmup: </h3>
-        <ul>
+        {/* <ul>
           <li>Hip Circles</li>
           <li>Bike 10 min</li>
           <li>Stretch ankles and hips</li>
-        </ul>
+        </ul> */}
       </div>
 
-      <div className="CoreWorkSection">
+      <div className="TodaysLiftSection">
         <h3>Core Work: </h3>
-        <ul>
+        {/* <ul>
           <li>
             <h4>Squats: </h4>
             <ul>
@@ -32,10 +34,10 @@ const TodaysLift = () => {
           </li>
           <li></li>
           <li></li>
-        </ul>
+        </ul> */}
       </div>
 
-      <div className="AccessorySection">
+      <div className="TodaysLiftSection">
         <h3>Accessory Movements: </h3>
       </div>
     </div>
