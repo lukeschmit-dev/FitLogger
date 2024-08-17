@@ -27,6 +27,15 @@ const Navbar = () => {
           return isActive ? { backgroundColor: "white" } : {};
         }}
         className="NavLink"
+        to="/Planner"
+      >
+        PLANNER
+      </NavLink>
+      <NavLink
+        style={({ isActive }) => {
+          return isActive ? { backgroundColor: "white" } : {};
+        }}
+        className="NavLink"
         to="/Settings"
       >
         SETTINGS

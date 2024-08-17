@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from 'react';
+import {UnitCalc} from '../utils/unitCalc'
 
 const EnterNewMax = () => {
   return (
@@ -17,6 +19,7 @@ const EnterNewMax = () => {
         <br></br>
         <label>Weight: </label>
         <input />
+        <label>{UnitCalc("weight")}</label>
         <br></br>
         <label>Reps: </label>
         <input />
