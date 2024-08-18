@@ -78,7 +78,6 @@ export const NewExercise = () => {
     }
   return (
     <div className="NewExercise">
-            <h1>Planning</h1>
             <div className="PlannerPage1 style-bgCompo">
                 <h3>New Exercise</h3>
                 <br/>
@@ -109,10 +108,10 @@ export const NewExercise = () => {
                 <br/>
                 <button type="submit" id="submitPlan" onClick={nodeSpawn}>Submit</button>
             </div>
-            <div className="PlannerPage2 style-bgCompo">
+            {/* <div className="PlannerPage2 style-bgCompo">
                 <h3>Current Schedule</h3>
                 <div id="scheduledExerList">{nodeSpawnCont}</div>
-            </div>
+            </div> */}
     </div>
   )
 }
