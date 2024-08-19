@@ -4,9 +4,10 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav id="Navbar">
+      <div id="nav-logoTitle"><img src="images/fitLoggerLogoWh.svg"></img>FitLogger</div>
       <NavLink
         style={({ isActive }) => {
-          return isActive ? { backgroundColor: "white" } : {};
+          return isActive ? {filter: "drop-shadow(0px 0px 2px var(--colorBone))" } : {};
         }}
         className="NavLink"
         to="/Results"
@@ -15,7 +16,7 @@ const Navbar = () => {
       </NavLink>
       <NavLink
         style={({ isActive }) => {
-          return isActive ? { backgroundColor: "white" } : {};
+          return isActive ? {filter: "drop-shadow(0px 0px 2px var(--colorBone))" } : {};
         }}
         className="NavLink"
         to="/Dashboard"
@@ -24,7 +25,7 @@ const Navbar = () => {
       </NavLink>
       <NavLink
         style={({ isActive }) => {
-          return isActive ? { backgroundColor: "white" } : {};
+          return isActive ? {filter: "drop-shadow(0px 0px 2px var(--colorBone))" } : {};
         }}
         className="NavLink"
         to="/Planner"
@@ -33,7 +34,7 @@ const Navbar = () => {
       </NavLink>
       <NavLink
         style={({ isActive }) => {
-          return isActive ? { backgroundColor: "white" } : {};
+          return isActive ? {filter: "drop-shadow(0px 0px 2px var(--colorBone))" } : {};
         }}
         className="NavLink"
         to="/Settings"

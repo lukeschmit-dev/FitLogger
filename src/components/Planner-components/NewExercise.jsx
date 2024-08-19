@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-export const NewExercise = () => {
+export const NewExercise = ({exerList, setExerList}) => {
     const [chosenExer, setChosenExer] = useState("Weights")
     const [inputDeets, setInputDeets] = useState({
         exerType: "Custom",
         title: "No Title",
-    })
-    const [nodeSpawnCont, setNodeSpawnCont] = useState([])
+    }) 
+    
     //use to plan specific parts days
 
     function exerShowMenu(event){
@@ -18,16 +18,20 @@ export const NewExercise = () => {
         const {name, value} = event.target
         setInputDeets((prev)=>({ //Important: prev is fixed react KW. always use prev and unpack it to ensure you get latest info!
             ...prev,
-            [name]: value
+            [name]: value,
+            "date": Date.now()
         }))
         console.log("current inputDeets state:", inputDeets)
     }
 
-    function nodeSpawn(){
-        console.log("pushing input deets to spawncont probably")
-        setNodeSpawnCont((prev)=>[
+    function nodeSpawn(){ 
+/*         setNodeSpawnCont((prev)=>[ // 🚧 unused
             ...prev, 
-            <div key={prev.length}><button>Edit</button><button>Remove</button>{createExerNode(inputDeets)}</div> 
+            <div key={prev.length}>{createExerNode(inputDeets)}</div> 
+        ]) */
+        setExerList((prev)=>[
+            ...prev,
+            createExerNode(inputDeets)
         ])
     }
 
@@ -40,7 +44,6 @@ export const NewExercise = () => {
                 return <div key={i}>{k}: {v}</div>
             }
         })
-        
     }
 
     function createInput(arr){
@@ -77,7 +80,7 @@ export const NewExercise = () => {
         "Misc": ["Sets", "Reps", "Minutes", "Level", "Settings"],
     }
   return (
-    <div className="NewExercise">
+    <div className="style-subcomp NewExercise">
             <div className="PlannerPage1 style-bgCompo">
                 <h3>New Exercise</h3>
                 <br/>

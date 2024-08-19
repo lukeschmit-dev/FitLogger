@@ -4,7 +4,7 @@ import { WorkoutsDropdown } from './WorkoutsDropdown'
 export const MyWeek = () => {
   
   return (
-    <div className="MyWeek">
+    <div className="style-subcomp MyWeek">
       <h3>My Week: </h3>
         <ul>
           <li>
