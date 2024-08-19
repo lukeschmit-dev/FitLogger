@@ -8,8 +8,12 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--colorObsidian);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(29,29,29,1) 88%, rgba(45,45,45,1) 96%);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: var(--font-secondary);
+  width: 100vw;
+  height: 100vh;
 }
 
 .DashboardPage {
