@@ -13,7 +13,7 @@ const Settings = () => {
   }
 
   return (
-    <div className="style-subcomp SettingsPage">
+    <div className="SettingsPage">
       <Navbar/>
       <button onClick={handleClick}>Unit System: {measurement}</button>
       <Footer/>
