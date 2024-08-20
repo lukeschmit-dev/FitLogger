@@ -9,19 +9,22 @@ export default function Planner(){
 
     const [nodeSpawnCont, setNodeSpawnCont] = useState([]) // 🚧 unused
 
-    const [exerList, setExerList] = useState([ //moved your external object into a usestate!
-        {
-            "Title": "Pushups",
-            "Reps": 20,
-            "Sets": 4,
-            "Weight": "none"
-        }, 
-        {
-            "Title": "Bench Press",
-            "Reps": 8,
-            "Sets": 4,
-            "Weight": 165
-        }
+    let templatePushup = {
+        "Title": "Pushups",
+        "Reps": 20,
+        "Sets": 4,
+        "Weight": "none"
+    }
+    let templateBench = {
+        "Title": "Bench Press",
+        "Reps": 8,
+        "Sets": 4,
+        "Weight": 165
+    }
+
+    const [exerList, setExerList] = useState([ //moved your external object into a usestate! new format. obj within obj in the array.
+        templatePushup,
+        templateBench,
     ])
 
     return (

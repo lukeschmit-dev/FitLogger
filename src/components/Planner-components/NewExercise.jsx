@@ -4,7 +4,7 @@ export const NewExercise = ({exerList, setExerList}) => {
     const [chosenExer, setChosenExer] = useState("Weights")
     const [inputDeets, setInputDeets] = useState({
         exerType: "Custom",
-        title: "No Title",
+        Title: "No Title",
     }) 
     
     //use to plan specific parts days
@@ -37,13 +37,20 @@ export const NewExercise = ({exerList, setExerList}) => {
 
     function createExerNode(_obj){
         /* const core = <><h3>{_obj.title}</h3><h3>{_obj.exerType}</h3></> */
-        return Object.entries(_obj).map(([k,v], i)=>{
+        let node = {}
+        Object.entries(_obj).map(([k,v], i)=>{
+            console.log("returning stuff ", k, v)
+                node[k] = v; 
+        })
+        return node
+
+/*         return Object.entries(_obj).map(([k,v], i)=>{
             if (k == "title" || k == "exerType"){
                 return <h3 key={i}>{v}</h3>
             } else {
                 return <div key={i}>{k}: {v}</div>
             }
-        })
+        }) */
     }
 
     function createInput(arr){
@@ -76,7 +83,7 @@ export const NewExercise = ({exerList, setExerList}) => {
         "Weights": ["Reps", "Sets", "Weight"],
         "HIIT": ["Reps/Minutes", "Sets", "Weight(Optional)", "Settings"],
         "Warmup": ["Reps/Minutes", "Sets", "Weight(Optional)", "Settings"],
-        "PR": ["Maximum Attempt", "Times"],
+        "PR": ["Weight", "Times"],
         "Misc": ["Sets", "Reps", "Minutes", "Level", "Settings"],
     }
   return (
@@ -96,7 +103,7 @@ export const NewExercise = ({exerList, setExerList}) => {
                     </select>
                     <div>
                         <label htmlFor="title">Title</label>
-                        <input type="text" name="title" onChange={updateInputDeets}/>
+                        <input type="text" name="Title" onChange={updateInputDeets}/>
                     </div>
                     <br/>
                     <div>
