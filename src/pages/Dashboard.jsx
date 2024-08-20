@@ -6,13 +6,14 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 
+
 const Dashboard = () => {
   return (
     <div className="DashboardPage">
       <Navbar/>
-        <DailyActions />
-        <EnterNewMax />
-        <TodaysLift />
+      <DailyActions />
+      <EnterNewMax />
+      <TodaysLift />
       <Footer/>
     </div>
   );

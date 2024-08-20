@@ -9,16 +9,21 @@ import {
 import Dashboard from "./pages/Dashboard";
 import Results from "./pages/Results";
 import Settings from "./pages/Settings";
+import Planner from "./pages/Planner"
+import { MeasurementProvider } from "./context/Measurements"
 
 function App() {
   return (
-    <div>
+    <MeasurementProvider>
+      <div>
         <Routes>
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/Results" element={<Results />} />
           <Route path="/Settings" element={<Settings />} />
+          <Route path="/Planner" element={<Planner />} />
         </Routes>
-    </div>
+      </div>
+    </MeasurementProvider>
   );
 }
 
