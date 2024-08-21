@@ -1,12 +1,14 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { MyWorkouts } from "../components/context/MyWorkouts";
 
 const Results = () => {
   return (
     <div className="ResultsPage">
       <Navbar/>
       <h1>Results page</h1>
+      <MyWorkouts/>
       <Footer/>
     </div>
   );
