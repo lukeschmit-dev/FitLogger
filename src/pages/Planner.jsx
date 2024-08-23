@@ -4,6 +4,7 @@ import Footer from "../components/Footer"
 import { MyWeek } from "../components/Planner-components/MyWeek";
 import { NewExercise } from "../components/Planner-components/NewExercise";
 import { MyExercises } from "../components/Planner-components/MyExercises";
+// import { WorkoutsByDay } from "../components/context/WorkoutsByDay"
 
 export default function Planner(){
 

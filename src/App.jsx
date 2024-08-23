@@ -18,7 +18,7 @@ function App() {
   return (
     <MeasurementProvider>
       <ListProvider>
-      {/* <WorkoutsByDayProvider> */}
+      <WorkoutsByDayProvider>
       <div>
         <Routes>
           <Route path="/Dashboard" element={<Dashboard />} />
@@ -27,7 +27,7 @@ function App() {
           <Route path="/Planner" element={<Planner />} />
         </Routes>
       </div>
-      {/* </WorkoutsByDayProvider> */}
+      </WorkoutsByDayProvider>
     </ListProvider>
     </MeasurementProvider>
   );

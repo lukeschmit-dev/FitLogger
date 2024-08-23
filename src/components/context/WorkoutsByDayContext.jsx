@@ -12,4 +12,9 @@ export const WorkoutsByDayProvider = ({children}) => {
             "saturday": "HITT",
             "sunday": "rest"
     })
+    return (
+        <WorkoutsByDayContext.Provider value={{ workoutsByDay, setWorkoutsByDay}}>
+          {children}
+        </WorkoutsByDayContext.Provider>
+      );
 }

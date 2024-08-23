@@ -29,11 +29,24 @@ export const ListProvider = ({ children }) => {
     "legs": {},
     "rest": {},
     "cardio": {},
-    "HITT": {}
+    "HITTT": {}
   });
 
+  const addExercise = (category, subcategory, exercise) => {
+    setWorkoutsList((prevWorkouts) => ({
+      ...prevWorkouts,
+      [category]: {
+        ...prevWorkouts[category],
+        [subcategory]: {
+          ...prevWorkouts[category][subcategory],
+          [exercise.title.toLowerCase().replace(/ /g, "_")]: exercise
+        }
+      }
+    }));
+  };
+
   return (
-    <ListContext.Provider value={{ workoutsList, setWorkoutsList }}>
+    <ListContext.Provider value={{ workoutsList, setWorkoutsList, addExercise }}>
       {children}
     </ListContext.Provider>
   );
