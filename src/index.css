@@ -8,7 +8,12 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(29,29,29,1) 90%, rgba(40,40,40,1) 100%);
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(29, 29, 29, 1) 90%,
+    rgba(40, 40, 40, 1) 100%
+  );
   background-repeat: no-repeat;
   background-size: cover;
   font-family: var(--font-secondary);
@@ -34,8 +39,6 @@ body {
   z-index: 0;
 }
 
-
-
 nav {
   display: flex;
   justify-content: flex-start;
@@ -59,7 +62,7 @@ nav {
   font-weight: 500;
 }
 
-#nav-logoTitle>img{
+#nav-logoTitle > img {
   height: 80%;
   object-fit: contain;
 }
@@ -71,31 +74,30 @@ nav {
   background-color: var(--colorBusinessGlass);
   background: var(--gradientGeist);
   backdrop-filter: blur(10px);
-   /* padding: 0.5rem; DO NOT USE REMS! */
+  /* padding: 0.5rem; DO NOT USE REMS! */
   padding: 1.5vmin;
   border-radius: 0.5rem;
   font-size: var(--font-M3);
   font-family: var(--font-primary);
   color: var(--colorBone);
-  box-shadow: 0 1px 0 1px rgba(0, 0, 0, .02), 0 4px 6px rgba(0, 0, 0, .02), inset 0 0 0 2px var(--colorVentaBlack);
-  
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.02), 0 4px 6px rgba(0, 0, 0, 0.02),
+    inset 0 0 0 2px var(--colorVentaBlack);
 }
 
 footer {
   background-color: rgb(213, 213, 213);
-  
+
   position: fixed;
   bottom: 1px;
   left: 43%;
 }
 
-.style-subcomp{
+.style-subcomp {
   border: 2px solid var(--colorBusinessGlass);
   background: var(--gradientPhantom);
   filter: drop-shadow(0 0 1px var(--colorAsbestos));
   color: var(--colorBone);
   font-weight: 700;
-  
 }
 
 .DailyActions {
@@ -157,14 +159,16 @@ footer {
   padding: 1rem;
   background-color: rgb(207, 207, 207);
   border-radius: 1rem;
-  width: 10rem;
+  width: 15rem;
   position: relative;
-  top: 25rem;
+  top: 10rem;
   left: 2rem;
 }
 .MyWeek li {
-  width: 8rem;
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.25rem;
 }
 .MyWeek li div {
   display: inline-block;
@@ -192,3 +196,32 @@ footer {
   margin: 1rem;
   background-color: rgb(166, 177, 216);
 }
+/* .MyWorkouts {
+  padding: 1rem;
+  background-color: rgb(207, 207, 207);
+  border-radius: 1rem;
+  width: 10rem;
+  position: absolute;
+}
+.MyWorkouts ul {
+  position: relative;
+}
+
+.MyWorkoutsLi {
+  width: 8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.25rem;
+}
+.EditWorkout {
+  display: inline-block;
+  position: absolute;
+  left: 15rem;
+  padding: 1rem;
+  background-color: rgb(207, 207, 207);
+  border-radius: 1rem;
+  z-index: 2;
+  width: 25rem;
+  height: 30rem;
+} */
