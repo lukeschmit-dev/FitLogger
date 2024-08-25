@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { MyWorkouts } from "../components/context/MyWorkouts";
+import { MyWorkouts } from "../components/Planner-components/MyWorkouts";
 // import { WorkoutsByDay } from "../components/context/WorkoutsByDay";
 
 const Results = () => {

@@ -159,14 +159,16 @@ footer {
   padding: 1rem;
   background-color: rgb(207, 207, 207);
   border-radius: 1rem;
-  width: 10rem;
+  width: 15rem;
   position: relative;
-  top: 25rem;
+  top: 10rem;
   left: 2rem;
 }
 .MyWeek li {
-  width: 8rem;
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.25rem;
 }
 .MyWeek li div {
   display: inline-block;

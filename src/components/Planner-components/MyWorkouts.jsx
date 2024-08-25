@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { ListContext } from './ListContext';
+import { ListContext } from '../context/ListContext';
 
 export const MyWorkouts = () => {
     const { workoutsList } = useContext(ListContext);

@@ -32,7 +32,6 @@ export default function Planner(){
         <div className="Planner">
             <Navbar/>
             <NewExercise nodeSpawnCont={nodeSpawnCont} setNodeSpawnCont={setNodeSpawnCont} exerList={exerList} setExerList={setExerList}/>
-            <MyWeek/>
             <MyExercises exerList={exerList} setExerList={setExerList}/>
             <Footer/>
         </div>
