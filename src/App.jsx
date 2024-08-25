@@ -10,7 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import Results from "./pages/Results";
 import Settings from "./pages/Settings";
 import Planner from "./pages/Planner"
-import { MeasurementProvider } from "./context/Measurements"
+import { MeasurementProvider } from "../src/components/context/Measurements"
 import { ListProvider } from "./components/context/ListContext";
 import { WorkoutsByDayProvider } from "./components/context/WorkoutsByDayContext";
 

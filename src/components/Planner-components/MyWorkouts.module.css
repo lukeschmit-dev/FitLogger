@@ -1,0 +1,54 @@
+.MyWorkouts {
+  padding: 1rem;
+  background-color: rgb(207, 207, 207);
+  border-radius: 1rem;
+  width: 10rem;
+  position: absolute;
+}
+.MyWorkoutsUl {
+  position: relative;
+}
+
+.MyWorkoutsLi {
+  width: 8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.25rem;
+}
+.EditWorkout {
+  display: inline-block;
+  position: absolute;
+  left: 15rem;
+  padding: 1rem;
+  background-color: rgb(207, 207, 207);
+  border-radius: 1rem;
+  z-index: 2;
+  width: 25rem;
+  height: 30rem;
+}
+.workoutBoxHeader {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.closeBtn {
+  position: relative;
+  left: 9rem;
+}
+.warmupSection {
+  width: 50%;
+  display: inline-block;
+  height: 8rem;
+  border: 1px solid black;
+}
+.miscSection {
+  width: 50%;
+  height: 8rem;
+  display: inline-block;
+  border: 1px solid black;
+}
+.coreWorkSection {
+  height: 15rem;
+  border: 1px solid black;
+}

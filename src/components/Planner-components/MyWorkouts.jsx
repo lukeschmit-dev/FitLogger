@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import styles from "./MyWorkouts.module.css"
 import { ListContext } from '../context/ListContext';
 
 export const MyWorkouts = () => {
@@ -21,11 +22,11 @@ export const MyWorkouts = () => {
 
     return (
       <>
-      <div className="MyWorkouts">
-          <ul className="MyWorkoutsUl">
+      <div className={ styles.MyWorkouts }>
+          <ul className={styles.MyWorkoutsUl}>
           <h3>My Workouts</h3>  
               {Object.keys(workoutsList).map((workout) => (
-                  <li className="MyWorkoutsLi" key={workout}>
+                  <li className={styles.MyWorkoutsLi} key={workout}>
                       <p>{workout.charAt(0).toUpperCase() + workout.slice(1)}</p>
                       <button onClick={() => handleButtonClick(workout)}>
                           View 
@@ -35,22 +36,23 @@ export const MyWorkouts = () => {
           </ul>
       </div>
           {activeWorkout && (
-              <div className="EditWorkout">
-                  <div className="workout-box">
-                      <div className="workout-box-header">
+              <div className={styles.EditWorkout}>
+                  <div className={styles.workoutBox}>
+                      <div className={styles.workoutBoxHeader}>
                           <h3>{activeWorkout.charAt(0).toUpperCase() + activeWorkout.slice(1)}</h3>
-                          <button onClick={handleCloseBox}>X</button>
+                          <button onClick={handleCloseBox} className={styles.closeBtn}>X</button>
                       </div>
-                      <div className="workout-section">
+                      <div className={styles.warmupSection}>
                           <h4>Warmup</h4>
                           {/* Add warmup content here */}
+                          
                       </div>
-                      <div className="workout-section">
-                          <h4>Core Work</h4>
+                      <div className={styles.miscSection}>
+                          <h4>Misc</h4>
                           {/* Add core work content here */}
                       </div>
-                      <div className="workout-section">
-                          <h4>Misc</h4>
+                      <div className={styles.coreWorkSection}>
+                          <h4>Core Work</h4>
                           {/* Add misc content here */}
                       </div>
                       <button onClick={handleSave}>Save</button>

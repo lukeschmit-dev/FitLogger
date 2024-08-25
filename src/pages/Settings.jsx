@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import MyWeek from "../components/Planner-components/MyWeek";
 
 import { useContext } from 'react';
-import { measurementContext } from '../context/Measurements'
+import {measurementContext } from "../components/context/Measurements"
 
 const Settings = () => {
   const {measurement, setMeasurement} = useContext(measurementContext);
