@@ -1,6 +1,7 @@
 import React, { useContext, useState }  from 'react'
 import {UnitCalc} from '../../utils/unitCalc'
 import { ListContext } from '../context/ListContext'
+import ContextBar from '../subComponents/ContextBar'
 
 export const MyExercises = () => {
   const { workoutsList } = useContext(ListContext)
@@ -8,6 +9,7 @@ export const MyExercises = () => {
 
   return (
     <div className="style-subcomp MyExercises">
+      <ContextBar />
       <h3>My Exercises: </h3>
       {Object.keys(workoutsList).map((category) => (
         Object.keys(workoutsList[category]).map((subcategory) => (

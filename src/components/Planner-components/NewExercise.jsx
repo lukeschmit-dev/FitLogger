@@ -1,8 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { ListContext } from '../context/ListContext';
+import ContextBar from '../subComponents/ContextBar';
 
-export const NewExercise = () => {
-    const [chosenExer, setChosenExer] = useState("Weights");
+
+
+
+
+export const NewExercise = ({exerList, setExerList}) => {
+    const [chosenExer, setChosenExer] = useState("Cardio")
     const [inputDeets, setInputDeets] = useState({
         exerType: "Custom",
         Title: "No Title",
@@ -68,6 +73,7 @@ export const NewExercise = () => {
 
     return (
         <div className="style-subcomp NewExercise">
+            <ContextBar />
             <div className="PlannerPage1 style-bgCompo">
                 <h3>New {chosenExer} Exercise</h3>
                 <br/>
@@ -93,10 +99,9 @@ export const NewExercise = () => {
                 </div>
                 <br/>
                 <div>
-                    {createInput(availDetails[chosenExer])}
+                    <label htmlFor="Exercise Name">Exercise</label>
+                    <input type="text" name="Exercise Name" onChange={updateInputDeets}/>
                 </div>
-                <br/>
-                <button type="submit" id="submitPlan" onClick={nodeSpawn}>Submit</button>
             </div>
         </div>
     );
