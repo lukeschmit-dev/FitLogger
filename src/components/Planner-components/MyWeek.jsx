@@ -1,11 +1,15 @@
 import React from 'react'
 import { WorkoutsDropdown } from './WorkoutsDropdown'
+import ContextBar from '../subComponents/ContextBar'
 
 export const MyWeek = () => {
   
   return (
     <div className="style-subcomp MyWeek">
+      <ContextBar />
+      <div className="style-bgCompo">
       <h3>My Week: </h3>
+        <br></br>
         <ul>
           <li>
             MON <WorkoutsDropdown/>
@@ -30,6 +34,7 @@ export const MyWeek = () => {
           </li>
         </ul>
         <button>Submit</button>
+        </div>
     </div>
   )
 }

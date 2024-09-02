@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import ContextBar from '../subComponents/ContextBar'
+
 
 export const NewExercise = ({exerList, setExerList}) => {
-    const [chosenExer, setChosenExer] = useState("Weights")
+    const [chosenExer, setChosenExer] = useState("Cardio")
     const [inputDeets, setInputDeets] = useState({
         exerType: "Custom",
         Title: "No Title",
@@ -87,37 +89,38 @@ export const NewExercise = ({exerList, setExerList}) => {
         "Misc": ["Sets", "Reps", "Minutes", "Level", "Settings"],
     }
   return (
-    <div className="style-subcomp NewExercise">
-            <div className="PlannerPage1 style-bgCompo">
-                <h3>New Exercise</h3>
-                <br/>
-                <div id="exerContent">
-                    <label htmlFor="exerType">Type</label>
-                    <select name="exerType" id="exerType" default="Choose a Category" onChange={exerShowMenu}>
-                        <option value="Cardio">Cardiovascular</option>
-                        <option value="Weights">Weight Training</option>
-                        <option value="HIIT">High Intensity</option>
-                        <option value="Warmup">Warm-Up</option>
-                        <option value="PR">Personal Record Attempt</option>
-                        <option value="Misc">Other</option>
-                    </select>
-                    <div>
-                        <label htmlFor="title">Title</label>
-                        <input type="text" name="Title" onChange={updateInputDeets}/>
-                    </div>
-                    <br/>
-                    <div>
-                        <label htmlFor="Exercise Name">Exercise</label>
-                        <input type="text" name="Exercise Name" onChange={updateInputDeets}/>
-                    </div>
+    <div className="NewExercise style-subcomp dragContainer">
+        <ContextBar />
+        <div className="PlannerPage1 style-bgCompo">
+            <h3>New Exercise</h3>
+            <br/>
+            <div id="exerContent">
+                <label htmlFor="exerType">Type</label>
+                <select name="exerType" id="exerType" default="Choose a Category" onChange={exerShowMenu}>
+                    <option value="Cardio">Cardiovascular</option>
+                    <option value="Weights">Weight Training</option>
+                    <option value="HIIT">High Intensity</option>
+                    <option value="Warmup">Warm-Up</option>
+                    <option value="PR">Personal Record Attempt</option>
+                    <option value="Misc">Other</option>
+                </select>
+                <div>
+                    <label htmlFor="title">Title</label>
+                    <input type="text" name="Title" onChange={updateInputDeets}/>
                 </div>
                 <br/>
                 <div>
-                    {createInput(availDetails[chosenExer])}
+                    <label htmlFor="Exercise Name">Exercise</label>
+                    <input type="text" name="Exercise Name" onChange={updateInputDeets}/>
                 </div>
-                <br/>
-                <button type="submit" id="submitPlan" onClick={nodeSpawn}>Submit</button>
             </div>
+            <br/>
+            <div>
+                {createInput(availDetails[chosenExer])}
+            </div>
+            <br/>
+            <button type="submit" id="submitPlan" onClick={nodeSpawn}>Submit</button>
+        </div>
             {/* <div className="PlannerPage2 style-bgCompo">
                 <h3>Current Schedule</h3>
                 <div id="scheduledExerList">{nodeSpawnCont}</div>
@@ -125,3 +128,4 @@ export const NewExercise = ({exerList, setExerList}) => {
     </div>
   )
 }
+

@@ -163,3 +163,76 @@ body{
     filter: saturate(0.2) brightness(1) !important;
 }
 
+/* dragLock */
+
+
+.dragContainer{ /**This parent container class is not attached to any functionalities in the .jsx file and can be safely ignored.**/
+    text-align: center;
+    width: 20rem;
+    border-radius: 15px;
+    position: absolute;
+    overflow: hidden;
+}
+
+#dragLockCtrl{
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-style: bold;
+  background: linear-gradient(0deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.3) 100%);
+  backdrop-filter: blur(16px);
+  border: none;
+  filter: drop-shadow(1px 1px 5px rgba(210,210,210,0.7));
+  min-width: 15rem;
+  min-height: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#dragLockCtrl:hover{
+  background-color: white;
+}
+
+.dragLockPoint{
+    background-color: rgba(225, 225, 225, 0.2);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(250, 250, 250, 0.3);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2rem;
+    cursor:move;
+}
+
+.dragLockPoint:after{
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 25%;
+    height: 25%;
+
+    border-radius: 50%;
+    border: 2px solid rgba(250, 250, 250, 0.5);
+} 
+
+.dragLockPoint::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    box-shadow:
+        -6px -6px 0 -4px rgba(250, 250, 250, 0.8),
+        6px 6px 0 -4px rgba(250, 250, 250, 0.8),
+        6px -6px 0 -4px rgba(250, 250, 250, 0.8),
+        -6px 6px 0 -4px rgba(250, 250, 250, 0.8);
+    transform: rotate(45deg)
+} 
+

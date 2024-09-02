@@ -1,5 +1,6 @@
 import React, { useState }  from 'react'
 import {UnitCalc} from '../../utils/unitCalc'
+import ContextBar from '../subComponents/ContextBar'
 
 /* let MyExercisesList = [
   {
@@ -21,6 +22,7 @@ export const MyExercises = ({exerList, setExerList}) => {
   
   return (
     <div className="style-subcomp MyExercises">
+      <ContextBar />
         <h3>My Exercises: </h3>
         <ul>
       {exerList.map((exercise, index) => (
