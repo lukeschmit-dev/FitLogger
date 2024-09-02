@@ -69,6 +69,7 @@ export const NewExercise = () => {
 
     return (
         <div className="style-subcomp NewExercise">
+            <ContextBar />
             <div className="PlannerPage1 style-bgCompo">
                 <h3>New {chosenExer} Exercise</h3>
                 <br/>

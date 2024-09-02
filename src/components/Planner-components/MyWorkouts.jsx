@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import styles from "./MyWorkouts.module.css"
 import { ListContext } from '../context/ListContext';
+import ContextBar from '../subComponents/ContextBar'
 
 export const MyWorkouts = () => {
     const { workoutsList } = useContext(ListContext);
@@ -23,6 +24,7 @@ export const MyWorkouts = () => {
     return (
       <>
       <div className={ styles.MyWorkouts }>
+        <ContextBar />
           <ul className={styles.MyWorkoutsUl}>
           <h3>My Workouts</h3>  
               {Object.keys(workoutsList).map((workout) => (

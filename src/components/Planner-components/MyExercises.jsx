@@ -9,6 +9,7 @@ export const MyExercises = () => {
 
   return (
     <div className="style-subcomp MyExercises">
+      <ContextBar />
       <h3>My Exercises: </h3>
       {Object.keys(workoutsList).map((category) => (
         Object.keys(workoutsList[category]).map((subcategory) => (
