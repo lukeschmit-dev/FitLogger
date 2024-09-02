@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import ContextBar from '../subComponents/ContextBar';
 import { ListContext } from '../context/ListContext';
-import ContextBar from '../subComponents/ContextBar';
 
 
 

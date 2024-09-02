@@ -2,7 +2,7 @@ import React, { useContext, useState }  from 'react'
 import {UnitCalc} from '../../utils/unitCalc'
 import ContextBar from '../subComponents/ContextBar'
 import { ListContext } from '../context/ListContext'
-import ContextBar from '../subComponents/ContextBar'
+
 
 export const MyExercises = () => {
   const { workoutsList } = useContext(ListContext)
