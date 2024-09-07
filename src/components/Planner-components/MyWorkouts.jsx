@@ -89,7 +89,6 @@ export const MyWorkouts = () => {
                       </div>
                       <div className={styles.coreWorkSection}>
                           <h4>Core Work</h4>
-                          {/* Add misc content here */}
                       </div>
                       <button onClick={handleSave}>Save</button>
                   </div>
