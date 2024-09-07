@@ -44,12 +44,48 @@ export const MyWorkouts = () => {
                       </div>
                       <div className={styles.warmupSection}>
                           <h4>Warmup</h4>
-                          {/* Add warmup content here */}
-                          
+                          {/* need to add each workout from ListContext in under activeWorkout 
+                          in the same way as was done on MyExercises*/}
+                            {Object.keys(workoutsList).map((category) => (
+                                Object.keys(workoutsList[category]).map((subcategory) => (
+                                Object.keys(workoutsList[category][subcategory]).map((exerciseKey) => {
+                                    const exercise = workoutsList[category][subcategory][exerciseKey];
+                                    return (
+                                        <ul className={styles.warmupUl}>
+                                            <li className={styles.exercise} key={exerciseKey}>
+                                                <div>
+                                                {exercise.title}
+                                                <button>del</button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    );
+                                })
+                                ))
+                            ))}
+                                
                       </div>
                       <div className={styles.miscSection}>
                           <h4>Misc</h4>
                           {/* Add core work content here */}
+                          {Object.keys(workoutsList).map((category) => (
+                                Object.keys(workoutsList[category]).map((subcategory) => (
+                                Object.keys(workoutsList[category][subcategory]).map((exerciseKey) => {
+                                    const exercise = workoutsList[category][subcategory][exerciseKey];
+                                    return (
+                                        <ul className={styles.miscUl}>
+                                            <li className={styles.exercise} key={exerciseKey}>
+                                                <div>
+                                                {exercise.title}
+                                                <button>del</button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    );
+                                })
+                                ))
+                            ))}
+                          
                       </div>
                       <div className={styles.coreWorkSection}>
                           <h4>Core Work</h4>

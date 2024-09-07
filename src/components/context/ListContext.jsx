@@ -22,7 +22,8 @@ export const ListProvider = ({ children }) => {
           "setting": "None"
         }
       },
-      "core work": {},
+      "core work": {
+      },
       "accessory movements": {}
     },
     "pull": {},
