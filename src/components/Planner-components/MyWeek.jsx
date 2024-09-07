@@ -1,5 +1,6 @@
 import React, {useContext, useState} from 'react'
-
+/* import { WorkoutsDropdown } from './WorkoutsDropdown' */
+import ContextBar from '../subComponents/ContextBar'
 import { WorkoutsByDayContext } from '../context/WorkoutsByDayContext'
 import { ListContext } from '../context/ListContext'
 
@@ -23,6 +24,7 @@ export const MyWeek = () => {
 
   return (
       <div className="MyWeek">
+        <ContextBar />
           <h3>My Week</h3>
           <ul>
               {Object.keys(workoutsByDay).map((day) => (
