@@ -23,14 +23,44 @@ export const ListProvider = ({ children }) => {
         }
       },
       "core work": {
+        "pushups": {
+          "title": "pushups"
+        },
+        "bench press": {
+          "title": "bench press"
+        }
       },
+      "accessory movements": {
+        "handstand balance": {
+          'title': "handstand"
+        }
+      }
+    },
+    "pull": {
+      "warmup": {},
+      "core work": {},
       "accessory movements": {}
     },
-    "pull": {},
-    "legs": {},
-    "rest": {},
-    "cardio": {},
-    "HITTT": {}
+    "legs": {
+      "warmup": {},
+      "core work": {},
+      "accessory movements": {}
+    },
+    "rest": {
+      "warmup": {},
+      "core work": {},
+      "accessory movements": {}
+    },
+    "cardio": {
+      "warmup": {},
+      "core work": {},
+      "accessory movements": {}
+    },
+    "HITTT": {
+      "warmup": {},
+      "core work": {},
+      "accessory movements": {}
+    }
   });
 
   const addExercise = (category, subcategory, exercise) => {

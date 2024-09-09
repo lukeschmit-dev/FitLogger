@@ -8,7 +8,6 @@ export const MyWorkouts = () => {
     const [activeWorkout, setActiveWorkout] = useState(null);
 
     const handleButtonClick = (workout) => {
-      console.log("button clicked: ", workout);
         setActiveWorkout(workout);
     };
 
@@ -17,9 +16,10 @@ export const MyWorkouts = () => {
     };
 
     const handleSave = () => {
-        console.log("Workout saved, workout: ", activeWorkout);
         setActiveWorkout(null);
     };
+    console.log("activeWorkout: ", activeWorkout)
+
 
     return (
       <>
@@ -37,6 +37,7 @@ export const MyWorkouts = () => {
               ))}
           </ul>
       </div>
+      {/* edit warmup box, only renders if an activeWorkout is set to something */}
           {activeWorkout && (
               <div className={styles.EditWorkout}>
                   <div className={styles.workoutBox}>
@@ -44,53 +45,57 @@ export const MyWorkouts = () => {
                           <h3>{activeWorkout.charAt(0).toUpperCase() + activeWorkout.slice(1)}</h3>
                           <button onClick={handleCloseBox} className={styles.closeBtn}>X</button>
                       </div>
+
+                      {/* warmup section */}
                       <div className={styles.warmupSection}>
                           <h4>Warmup</h4>
-                          {/* need to add each workout from ListContext in under activeWorkout 
-                          in the same way as was done on MyExercises*/}
-                            {Object.keys(workoutsList).map((category) => (
-                                Object.keys(workoutsList[category]).map((subcategory) => (
-                                Object.keys(workoutsList[category][subcategory]).map((exerciseKey) => {
-                                    const exercise = workoutsList[category][subcategory][exerciseKey];
-                                    return (
-                                        <ul className={styles.warmupUl}>
-                                            <li className={styles.exercise} key={exerciseKey}>
-                                                <div>
-                                                {exercise.title}
-                                                <button>del</button>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    );
-                                })
+                            <ul>
+                                {Object.keys(workoutsList[activeWorkout]['warmup']).length > 0 ? (
+                                 Object.keys(workoutsList[activeWorkout]['warmup']).map((exerciseTitle) => (
+                                    <li key={exerciseTitle}>
+                                        {exerciseTitle}
+                                        <button>rem</button>
+                                    </li>
                                 ))
-                            ))}
+                                 ) : (
+                                    <p>empty</p>
+                                 )
+                                }
+                            </ul>
                                 
                       </div>
                       <div className={styles.miscSection}>
-                          <h4>Misc</h4>
-                          {/* Add core work content here */}
-                          {Object.keys(workoutsList).map((category) => (
-                                Object.keys(workoutsList[category]).map((subcategory) => (
-                                Object.keys(workoutsList[category][subcategory]).map((exerciseKey) => {
-                                    const exercise = workoutsList[category][subcategory][exerciseKey];
-                                    return (
-                                        <ul className={styles.miscUl}>
-                                            <li className={styles.exercise} key={exerciseKey}>
-                                                <div>
-                                                {exercise.title}
-                                                <button>del</button>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    );
-                                })
+                          <h4>Misc</h4> 
+                          <ul>
+                                {Object.keys(workoutsList[activeWorkout]['accessory movements']).length > 0 ? (
+                                Object.keys(workoutsList[activeWorkout]['accessory movements']).map((exerciseTitle) => (
+                                    <li key={exerciseTitle}>
+                                        {exerciseTitle}
+                                        <button>rem</button>
+                                    </li>
                                 ))
-                            ))}
-                          
+                                ) : (
+                                    <p>empty</p>
+                                )
+                            }
+                            </ul>
                       </div>
+
                       <div className={styles.coreWorkSection}>
                           <h4>Core Work</h4>
+                          <ul>
+                          {Object.keys(workoutsList[activeWorkout]['core work']).length > 0 ? (
+                                 Object.keys(workoutsList[activeWorkout]['core work']).map((exerciseTitle) => (
+                                    <li key={exerciseTitle}>
+                                        {exerciseTitle}
+                                        <button>rem</button>
+                                    </li>
+                                ))
+                                 ) : (
+                                    <p>empty</p>
+                                 )
+                                }
+                          </ul>
                       </div>
                       <button onClick={handleSave}>Save</button>
                   </div>
