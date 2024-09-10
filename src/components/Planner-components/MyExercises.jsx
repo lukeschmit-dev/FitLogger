@@ -1,41 +1,31 @@
 import React, { useContext, useState }  from 'react'
-import {UnitCalc} from '../../utils/unitCalc'
+// import {UnitCalc} from '../../utils/unitCalc'
 import ContextBar from '../subComponents/ContextBar'
 import { ListContext } from '../context/ListContext'
 
 
-export const MyExercises = () => {
-  const { workoutsList } = useContext(ListContext)
-  console.log("workoutslist: ", workoutsList)
+export const MyExercises = (exerList, setExerList) => {
+  const { exercises } = useContext(ListContext)
+
 
   return (
     <div className="style-subcomp MyExercises">
       <ContextBar />
       <h3>My Exercises: </h3>
-      {Object.keys(workoutsList).map((category) => (
-        Object.keys(workoutsList[category]).map((subcategory) => (
-          Object.keys(workoutsList[category][subcategory]).map((exerciseKey) => {
-            const exercise = workoutsList[category][subcategory][exerciseKey];
-            return (
-              <li key={exerciseKey}>
-                <button>Edit</button><button>Remove</button>
-                <div>
-                  {exercise.title} | 
-                  {exercise.reps ? `${exercise.reps} Reps | ` : ""}
-                  {exercise.sets ? `${exercise.sets} Sets | ` : ""}
-                  {exercise.minutes ? `${exercise.minutes} Minutes | ` : ""}
-                  {exercise.level ? `Level ${exercise.level} | ` : ""}
-                  {exercise.weight ? `Weight: ${exercise.weight} ${UnitCalc("weight")} | ` : ""}
-                  {exercise.setting ? `${exercise.setting} | ` : ""}
-                </div>
-              </li>
-            );
-          })
-        ))
-      ))}
+      <ul>
+        {exercises.map(exercise => (
+          <li key={exercise.id}>
+            <h4>
+            {exercise.title}
+            </h4>
+            <p> {exercise.minutes} | {exercise.level} | {exercise.setting} </p>
+          </li>
+        ))}
+      </ul>
     </div>
-  );
-}
+  )
+};
+
 
 // export const MyExercises = ({exerList, setExerList}) => {
   

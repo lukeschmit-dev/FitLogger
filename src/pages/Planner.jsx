@@ -31,8 +31,8 @@ export default function Planner(){
     return (
         <div className="Planner">
             <Navbar/>
-            <NewExercise nodeSpawnCont={nodeSpawnCont} setNodeSpawnCont={setNodeSpawnCont} exerList={exerList} setExerList={setExerList}/>
-            <MyExercises exerList={exerList} setExerList={setExerList}/>
+            {/* <NewExercise nodeSpawnCont={nodeSpawnCont} setNodeSpawnCont={setNodeSpawnCont} exerList={exerList} setExerList={setExerList}/> */}
+            <MyExercises/>
             <Footer/>
         </div>
     )

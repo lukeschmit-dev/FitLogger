@@ -62,7 +62,7 @@ export const MyWorkouts = () => {
                                  )
                                 }
                             </ul>
-                                
+                            button
                       </div>
                       <div className={styles.miscSection}>
                           <h4>Misc</h4> 
@@ -96,6 +96,7 @@ export const MyWorkouts = () => {
                                  )
                                 }
                           </ul>
+
                       </div>
                       <button onClick={handleSave}>Save</button>
                   </div>
