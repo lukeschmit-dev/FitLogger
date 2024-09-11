@@ -29,7 +29,8 @@ export const ListProvider = ({ children }) => {
     "legs": {},
     "rest": {},
     "cardio": {},
-    "HITTT": {}
+    "HITTT": {},
+    "stretching": {}
   });
 
   const addExercise = (category, subcategory, exercise) => {

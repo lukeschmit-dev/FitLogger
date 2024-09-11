@@ -23,7 +23,7 @@ export const MyWeek = () => {
   };
 
   return (
-      <div className="MyWeek">
+      <div className="style-subcomp MyWeek">
         <ContextBar />
           <h3>My Week</h3>
           <ul>
