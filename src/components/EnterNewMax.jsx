@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from 'react';
-import {UnitCalc} from '../utils/unitCalc'
+import UnitCalc from '../utils/unitCalc'
 
 const EnterNewMax = () => {
   return (
