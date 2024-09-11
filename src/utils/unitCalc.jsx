@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import { useMeasurement } from "../components/context/Measurements"
 
-export function UnitCalc(_type){
+export default function UnitCalc(_type){
     const measurement = useMeasurement().measurement;
     let type;
     console.log("detected measurement - ", measurement)
