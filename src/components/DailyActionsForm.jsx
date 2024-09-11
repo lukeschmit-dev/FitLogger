@@ -6,10 +6,13 @@ export const DailyActionsForm = ({setActions}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(value);
-    setActions((prev)=>[
-      ...prev,
-      {title: value, completed: false}
-    ])
+    if (value!=null && value!=""){
+      setActions((prev)=>[
+        ...prev,
+        {title: value, completed: false}
+      ])
+    }
+    
   };
 
   return (
