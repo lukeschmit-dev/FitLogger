@@ -44,7 +44,7 @@ export const MyWorkouts = () => {
 
     return (
       <>
-      <div className={ styles.MyWorkouts }>
+      <div className={`${ styles.MyWorkouts } style-subcomp`}>
         <ContextBar />
           <ul className={styles.MyWorkoutsUl}>
           <h3>My Workouts</h3>  

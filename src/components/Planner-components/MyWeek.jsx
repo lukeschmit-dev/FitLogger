@@ -31,7 +31,7 @@ export const MyWeek = () => {
   console.log("!!DAYS OBJ", days) //🚧testing. remove after
 
   return (
-      <div className="MyWeek">
+      <div className="style-subcomp MyWeek">
         <ContextBar />
           <h3>My Week</h3>
           <ul>
