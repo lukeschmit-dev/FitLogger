@@ -57,7 +57,6 @@ export const ListProvider = ({ children }) => {
     {day: 'Saturday', workoutID: 'legs'},
     {day: 'Sunday', workoutID: 'legs'} //5 leg days. this must be Tom Platz's workout plan
   ])
-  });
 
 
   return (

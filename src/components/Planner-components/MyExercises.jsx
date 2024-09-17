@@ -18,7 +18,15 @@ export const MyExercises = (exerList, setExerList) => {
             <h4>
             {exercise.title}
             </h4>
-            <p> {exercise.minutes} | {exercise.level} | {exercise.setting} </p>
+            <p>
+            {exercise.exercise && <p>Exercise: {exercise.exercise}</p>}
+            {exercise.minutes && <p>Time: {exercise.minutes} minutes</p>}
+            {exercise.level && <p>Level: {exercise.level}</p>}
+            {exercise.setting && <p>Setting: {exercise.setting}</p>}
+            {exercise.sets && <p>Sets: {exercise.sets}</p>}
+            {exercise.reps && <p>Reps: {exercise.reps}</p>}
+            {exercise.weight && <p>Weight: {exercise.weight}</p>}
+            </p>
           </li>
         ))}
       </ul>
