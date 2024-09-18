@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/Results" element={<Results />} />
-          <Route path="/Settings" element={<Settings />} />
+          {/* <Route path="/Settings" element={<Settings />} /> */}
           <Route path="/Planner" element={<Planner />} />
         </Routes>
       </div>

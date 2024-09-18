@@ -16,8 +16,8 @@ const Settings = () => {
   return (
     <div className="SettingsPage">
       <Navbar/>
-      <button onClick={handleClick}>Unit System: {measurement}</button>
-      <MyWeek/>
+      {/* <button onClick={handleClick}>Unit System: {measurement}</button> */}
+      {/* <MyWeek/> */}
       <Footer/>
     </div>
   )

@@ -34,7 +34,7 @@ const Navbar = () => {
       >
         PLANNER
       </NavLink>
-      <NavLink
+      {/* <NavLink
         style={({ isActive }) => {
           return isActive ? {filter: "drop-shadow(0px 0px 2px var(--colorBone))" } : {};
         }}
@@ -42,7 +42,7 @@ const Navbar = () => {
         to="/Settings"
       >
         SETTINGS
-      </NavLink>
+      </NavLink> */}
     </nav>
   );
 };

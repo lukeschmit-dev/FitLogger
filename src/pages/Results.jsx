@@ -10,7 +10,7 @@ const Results = () => {
       <Navbar/>
       <h1>Results page</h1>
       {/* <WorkoutsByDay/> */}
-      <MyWorkouts/>
+      {/* <MyWorkouts/> */}
       <Footer/>
     </div>
   );
