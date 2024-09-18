@@ -13,14 +13,19 @@ export const ListProvider = ({ children }) => {
     { id: 4, title: "Bench Press", exercise: "Bench Press", reps: 10, sets: 4, weight: 65},
     { id: 5, title: "Handstand Balance" },
     { id: 6, title: "Kettlebell", exercise: "Kettlebell Swing", minutes: 4, level: "Easy", setting: null  },
-    // { id: 7, title: "Handstand Balance" },
-    // { id: 8, title: "Handstand Balance" },
-    // { id: 9, title: "Handstand Balance" },
-    // { id: 10, title: "Handstand Balance" },
-    // { id: 11, title: "Handstand Balance" },
-    // { id: 12, title: "Handstand Balance" },
-    // { id: 13, title: "Handstand Balance" }
-  
+    { id: 7, title: "Handstand Balance" },
+    // { id: 8, title: "Kettlebell", exercise: "Kettlebell Swing", minutes: 4, level: "Easy", setting: null  },
+    // { id: 9, title: "Kettlebell", exercise: "Kettlebell Swing", minutes: 4, level: "Easy", setting: null  },
+    // { id: 10, title: "Kettlebell", exercise: "Kettlebell Swing", minutes: 4, level: "Easy", setting: null  },
+    // { id: 11, title: "Kettlebell", exercise: "Kettlebell Swing", minutes: 4, level: "Easy", setting: null  },
+    // { id: 12, title: "Kettlebell", exercise: "Kettlebell Swing", minutes: 4, level: "Easy", setting: null  },
+    // { id: 13, title: "Kettlebell", exercise: "Kettlebell Swing", minutes: 4, level: "Easy", setting: null  },
+    // { id: 14, title: "Kettlebell", exercise: "Kettlebell Swing", minutes: 4, level: "Easy", setting: null  },
+    // { id: 15, title: "Kettlebell", exercise: "Kettlebell Swing", minutes: 4, level: "Easy", setting: null  },
+    // { id: 16, title: "Kettlebell", exercise: "Kettlebell Swing", minutes: 4, level: "Easy", setting: null  },
+    // { id: 17, title: "Kettlebell", exercise: "Kettlebell Swing", minutes: 4, level: "Easy", setting: null  },
+    // { id: 18, title: "Kettlebell", exercise: "Kettlebell Swing", minutes: 4, level: "Easy", setting: null  },
+    // { id: 19, title: "Kettlebell", exercise: "Kettlebell Swing", minutes: 4, level: "Easy", setting: null  },
   ]);
 
 // workouts (categorized lists of workouts)
@@ -43,7 +48,7 @@ export const ListProvider = ({ children }) => {
       id: 'legs',
       name: 'Legs',
       warmup: [1, 2],
-      coreWork: [3, 4],
+      coreWork: [1],
       accessoryMovements: [5]
     }
   ]);

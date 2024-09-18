@@ -1,0 +1,66 @@
+.TodaysLift {
+  background-color: pink;
+  /* display: inline-block; */
+  display: grid;
+  grid-template-rows: 3rem 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
+
+  width: 75rem;
+  height: 45rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  position: fixed;
+  top: 5rem;
+  left: 2rem;
+  color: white;
+}
+/* .Today {
+  color: white;
+  margin-right: auto;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+} */
+.TodaysLiftSection1 {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  grid-column: 1;
+  grid-row: 2;
+  max-height: 100%;
+  overflow-y: auto;
+}
+.TodaysLiftSection2 {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  grid-column: 2;
+  grid-row: 2;
+  max-height: 100%;
+}
+.TodaysLiftSection3 {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  grid-column: 1 / end;
+  grid-row: 3;
+  max-height: 100%;
+  overflow-y: auto;
+}
+.li {
+  border: 1px solid black;
+  max-width: 47%;
+}
+.coreworkli {
+  border: 1px solid black;
+  flex: 1 1 calc(25% - px);
+}
+.ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+  justify-content: last baseline;
+}

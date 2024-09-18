@@ -42,10 +42,7 @@
   height: 8rem;
   border: 1px solid black;
 }
-.workoutListUp{
-  
-}
-.workoutListUp>p{
+.workoutListUp > p {
   font-size: var(--font-M3);
   font-family: var(--font-secondary);
   font-weight: 700;

@@ -20,7 +20,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
-h3{
+h3 {
   text-wrap: nowrap;
 }
 .DashboardPage {
@@ -41,7 +41,7 @@ h3{
   z-index: 0;
 }
 
-h3{
+h3 {
   font-family: var(--font-primary);
   font-size: var(--font-M2);
   font-weight: 200;
@@ -121,8 +121,8 @@ footer {
   align-items: center;
   border-radius: 0.5rem;
   position: fixed;
-  right: 10rem;
-  bottom: 10rem;
+  right: 2rem;
+  bottom: 2rem;
 }
 
 .EnterNewMax {
@@ -135,11 +135,11 @@ footer {
   align-items: center;
   border-radius: 0.5rem;
   position: fixed;
-  right: 10rem;
-  top: 10rem;
+  right: 2rem;
+  top: 2rem;
 }
 
-.TodaysLift {
+/* .TodaysLift {
   background-color: pink;
   display: inline-block;
   width: 40rem;
@@ -150,21 +150,21 @@ footer {
   bottom: 3rem;
   left: 6rem;
   color: white;
-}
+} */
 
-.Today {
+/* .Today {
   color: white;
   margin-right: auto;
   font-size: 1.5rem;
   position: absolute;
   right: 1rem;
-}
+} */
 
-.TodaysLiftSection {
+/* .TodaysLiftSection {
   padding: 1rem;
   border: 1px solid black;
   border-radius: 1rem;
-}
+} */
 
 .MyWeek {
   padding: 1rem;
@@ -213,7 +213,7 @@ footer {
   background-color: rgb(166, 177, 216);
 }
 
-.contextBar{
+.contextBar {
   border-bottom: 1px solid var(--colorBusinessGlass);
   filter: drop-shadow(0 0 1px var(--colorAsbestos));
   width: 100%;
@@ -227,7 +227,7 @@ footer {
   justify-content: end;
 }
 
-.dragFig{
+.dragFig {
   position: absolute;
   left: 5%;
   top: 0;
@@ -237,24 +237,24 @@ footer {
   z-index: 5;
 }
 
-.btn-minimize{
+.btn-minimize {
   background: none;
   background-image: url(../public/images/iconMinimize.svg);
   height: 2rem;
   width: 1.5rem;
-  filter: drop-shadow(0 0 0 rgba(0,0,0,0));
+  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
   border: none;
   background-position: center;
 }
 
-.btn-frameless{
+.btn-frameless {
   transition: all 0.2s linear;
   background-size: contain;
   background-repeat: no-repeat;
   border: none;
 }
 
-.btn-frameless:hover{
+.btn-frameless:hover {
   filter: drop-shadow(0 0 2px var(--colorBone));
 }
 

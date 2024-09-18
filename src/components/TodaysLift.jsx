@@ -1,5 +1,6 @@
 import React, {useContext, useState} from "react";
 import { ListContext } from './context/ListContext'
+import styles from './TodaysLift.module.css'
 
 
 
@@ -64,15 +65,37 @@ const TodaysLift = () => {
 
 
   return (
-    <div className="TodaysLift">
-      <div className='Today'>{dayOfWeek}</div>
+    <div className={styles.TodaysLift}>
+      <div className={styles.Today}>{dayOfWeek}</div>
       <h1>Todays Lift: {workoutEntry.name}</h1>
 
-      <div className="TodaysLiftSection">
+      <div className={styles.TodaysLiftSection1}>
         <h3>Warmup: </h3>
-      <ul>
-        {todaysWarmup.map(exercise => (
-          <li key={exercise.id}>
+        <ul className={styles.ul}>
+          
+          {todaysWarmup.map(exercise => (
+            <li key={exercise.id} className={styles.li}>
+              <h4 >
+              {exercise.title}
+              </h4>
+              {exercise.exercise && <p>Exercise: {exercise.exercise}</p>}
+              {exercise.minutes && <p>Time: {exercise.minutes} minutes</p>}
+              {exercise.level && <p>Level: {exercise.level}</p>}
+              {exercise.setting && <p>Setting: {exercise.setting}</p>}
+              {exercise.sets && <p>Sets: {exercise.sets}</p>}
+              {exercise.reps && <p>Reps: {exercise.reps}</p>}
+              {exercise.weight && <p>Weight: {exercise.weight}</p>}
+            </li>
+          ))}
+
+        </ul>
+      </div>
+
+      <div className={styles.TodaysLiftSection2}>
+        <h3>Accessory Movements: </h3>
+        <ul className={styles.ul}>
+        {todaysAccessoryMovements.map(exercise => (
+          <li key={exercise.id} className={styles.li}>
             <h4>
             {exercise.title}
             </h4>
@@ -87,15 +110,28 @@ const TodaysLift = () => {
         ))}
 
       </ul>
-      </div>
-
-      <div className="TodaysLiftSection">
-        <h3>Accessory Movements: </h3>
        
       </div>
-      
-      <div className="TodaysLiftSection">
+
+      <div className={styles.TodaysLiftSection3}>
         <h3>Core Work: </h3>
+        <ul className={styles.ul}>
+        {todaysCoreWork.map(exercise => (
+          <li key={exercise.id} className={styles.coreworkli}>
+            <h4>
+            {exercise.title}
+            </h4>
+            {exercise.exercise && <p>Exercise: {exercise.exercise}</p>}
+            {exercise.minutes && <p>Time: {exercise.minutes} minutes</p>}
+            {exercise.level && <p>Level: {exercise.level}</p>}
+            {exercise.setting && <p>Setting: {exercise.setting}</p>}
+            {exercise.sets && <p>Sets: {exercise.sets}</p>}
+            {exercise.reps && <p>Reps: {exercise.reps}</p>}
+            {exercise.weight && <p>Weight: {exercise.weight}</p>}
+          </li>
+        ))}
+
+      </ul>
        
       </div>
 
