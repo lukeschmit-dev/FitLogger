@@ -65,7 +65,7 @@ const TodaysLift = () => {
 
 
   return (
-    <div className={styles.TodaysLift}>
+    <div className={`${ styles.TodaysLift } style-subcomp`}>
       <div className={styles.Today}>{dayOfWeek}</div>
       <h1>Todays Lift: {workoutEntry.name}</h1>
 
@@ -78,7 +78,7 @@ const TodaysLift = () => {
               <h4 >
               {exercise.title}
               </h4>
-              {exercise.exercise && <p>Exercise: {exercise.exercise}</p>}
+              {exercise.exercise && <p >Exercise: {exercise.exercise}</p>}
               {exercise.minutes && <p>Time: {exercise.minutes} minutes</p>}
               {exercise.level && <p>Level: {exercise.level}</p>}
               {exercise.setting && <p>Setting: {exercise.setting}</p>}

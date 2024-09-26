@@ -5,8 +5,8 @@
   grid-template-rows: 3rem 1fr 1.5fr;
   grid-template-columns: 1fr 1fr;
 
-  width: 75rem;
-  height: 45rem;
+  width: 60rem;
+  max-height: 80vh;
   border-radius: 0.5rem;
   padding: 1rem;
   position: fixed;
@@ -23,16 +23,17 @@
 } */
 .TodaysLiftSection1 {
   padding: 1rem;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 1rem;
   grid-column: 1;
   grid-row: 2;
   max-height: 100%;
   overflow-y: auto;
+  box-shadow: inset 0px -10px 10px rgb(255, 255, 255);
 }
 .TodaysLiftSection2 {
   padding: 1rem;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 1rem;
   grid-column: 2;
   grid-row: 2;
@@ -40,7 +41,7 @@
 }
 .TodaysLiftSection3 {
   padding: 1rem;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 1rem;
   grid-column: 1 / end;
   grid-row: 3;
@@ -48,11 +49,11 @@
   overflow-y: auto;
 }
 .li {
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   max-width: 47%;
 }
 .coreworkli {
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   flex: 1 1 calc(25% - px);
 }
 .ul {
@@ -63,4 +64,7 @@
   margin: 0;
   gap: 1rem;
   justify-content: last baseline;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #f0f0f0;
 }

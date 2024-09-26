@@ -47,8 +47,8 @@ export const ListProvider = ({ children }) => {
     {
       id: 'legs',
       name: 'Legs',
-      warmup: [1, 2],
-      coreWork: [1],
+      warmup: [1, 2, 3, 4, 5],
+      coreWork: [1, 2, 3, 4, 5, 6, 7],
       accessoryMovements: [5]
     }
   ]);
@@ -63,9 +63,13 @@ export const ListProvider = ({ children }) => {
     {day: 'Sunday', workoutID: 'legs'} //5 leg days. this must be Tom Platz's workout plan
   ])
 
+  const [maxes, setMaxes] = useState([
+    {id: 3, entries: [{weight: "none", reps: 25}, {weight: "none", reps: 31}]},
+    {id: 4, entries: [{weight: 135, reps: 2}, {weight: 155, reps: 1}]}
+  ])
 
   return (
-    <ListContext.Provider value={{ exercises, setExercises, workoutsList, setWorkoutsList, days, setDays}}>
+    <ListContext.Provider value={{ exercises, setExercises, workoutsList, setWorkoutsList, days, setDays, maxes, setMaxes}}>
       {children}
     </ListContext.Provider>
   );
